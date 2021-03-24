@@ -1,11 +1,15 @@
 package org.openjfx;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class UserSimple
 {
     private String name;
     private String email;
     private Integer age;
     private Boolean isDeveloper;
+
 
     public UserSimple(String newName, String newEmail, Integer newAge, Boolean newisDeveloper)
     {
@@ -15,28 +19,39 @@ public class UserSimple
         this.isDeveloper = newisDeveloper;
     }
 
+    public HashMap getMap()
+    {
+        Map entries = new HashMap();
+        entries.put("Name", this.name);
+        entries.put("Email", this.email);
+        entries.put("Age", this.age);
+        entries.put("IsDeveloper", this.isDeveloper);
+        return  (HashMap)entries;
+    }
+
+
     public String getName()
     {
-        String name = this.name;
-        return name;
+        String gname = this.name;
+        return gname;
     }
 
     public String getEmail()
     {
-        String email = this.email;
-        return email;
+        String gemail = this.email;
+        return gemail;
     }
 
-    public Integer getAge()
+    public int getAge()
     {
-        Integer age = this.age;
-        return age;
+        int gage = this.age;
+        return gage;
     }
 
     public Boolean getIsDeveloper()
     {
-        Boolean isDeveloper = this.isDeveloper;
-        return isDeveloper;
+        Boolean gisDeveloper = this.isDeveloper;
+        return gisDeveloper;
     }
 
 }

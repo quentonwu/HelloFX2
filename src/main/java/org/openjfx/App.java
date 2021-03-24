@@ -46,10 +46,7 @@ public class App extends Application
     {
         //launch();
 
-        UserSimple norman = new UserSimple("Norman", "Test", 26, true);
         UserSimple quenton = new UserSimple("Quenton", "test@github.com", 26, true);
-        System.out.println(norman.getAge());
-        System.out.println(quenton.getEmail());
 
         //Create the file if it doesn't exist. If the file doesn't exist, it will be created
         try
@@ -83,5 +80,7 @@ public class App extends Application
             System.out.println("An error occured when attempting to write to file");
             we.printStackTrace();
         }
+
+        System.out.print(UserSimple.getMap());
     }
 }
