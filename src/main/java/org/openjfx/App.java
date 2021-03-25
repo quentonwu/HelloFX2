@@ -49,7 +49,7 @@ public class App extends Application
         UserSimple quenton = new UserSimple("Quenton", "test@github.com", 26, true);
 
         //Create the file if it doesn't exist. If the file doesn't exist, it will be created
-        try
+        /*try
         {
             File fptr = new File("fptr.txt");
             if (fptr.createNewFile())
@@ -65,13 +65,18 @@ public class App extends Application
         {
             System.out.println("An error occured");
             e.printStackTrace();
-        }
+        }*/
+
+        System.out.print(quenton.getMap());
+
+        Gson gtest = new Gson();
+        var qJson = gtest.toJson(quenton.getMap());
 
         //Try writing a line on the newly created file
         try
         {
-            FileWriter myWriter = new FileWriter("fptr.txt");
-            myWriter.write("This is a bloody pain in the arse!!");
+            FileWriter myWriter = new FileWriter("quenton.json");
+            myWriter.write(qJson);
             myWriter.close();
             System.out.println("Wrote to the file");
         }
@@ -81,6 +86,6 @@ public class App extends Application
             we.printStackTrace();
         }
 
-        System.out.print(UserSimple.getMap());
+
     }
 }

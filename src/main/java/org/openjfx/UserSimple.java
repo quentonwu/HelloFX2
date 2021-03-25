@@ -26,7 +26,7 @@ public class UserSimple
         entries.put("Email", this.email);
         entries.put("Age", this.age);
         entries.put("IsDeveloper", this.isDeveloper);
-        return  (HashMap)entries;
+        return (HashMap) entries;
     }
 
 
